@@ -10,7 +10,7 @@ import ContainerWrapper from "./components/container";
 
 function App() {
   return (
-    <div className="bg-dark">
+    <div>
       <ContainerWrapper>
         <Nav />
         <Routes>

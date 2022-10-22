@@ -1,0 +1,33 @@
+@use "../../assets/styles/_partials/mixins";
+
+#header {
+  padding: 0 2.5rem;
+  min-height: max-content;
+  height: 100vh;
+
+  span {
+    display: block;
+    text-align: center;
+    @include mixins.mq_lg {
+      max-width: 610px;
+      text-align: left;
+    }
+  }
+
+  .hero-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    min-height: max-content;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../assets/bg/bg_1.png"),
+      linear-gradient(to bottom, #000 0%, #00000052 13%);
+  }
+}

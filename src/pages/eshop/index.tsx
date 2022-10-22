@@ -1,5 +1,12 @@
+import Header from "./header";
+import "./style.scss";
+
 const EShop = () => {
-  return <div>EShop</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default EShop;
