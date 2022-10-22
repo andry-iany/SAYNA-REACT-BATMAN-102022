@@ -31,3 +31,15 @@
       linear-gradient(to bottom, #000 0%, #00000052 13%);
   }
 }
+
+#filter {
+  .accordion-button,
+  .accordion-item {
+    background-color: #000 !important;
+    color: #fff;
+  }
+  .accordion-button::after {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(8%)
+      hue-rotate(146deg) brightness(103%) contrast(103%);
+  }
+}
