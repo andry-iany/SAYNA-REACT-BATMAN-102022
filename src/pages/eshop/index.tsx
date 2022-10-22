@@ -1,6 +1,7 @@
 import ArrowDown from "../../components/arrow-down";
 import Filter from "./filter";
 import Header from "./header";
+import Results from "./results";
 import "./style.scss";
 
 const EShop = () => {
@@ -12,7 +13,9 @@ const EShop = () => {
         <article className="col-3">
           <Filter />
         </article>
-        <article className="col-9">{/* <app-results></app-results> */}</article>
+        <article className="col-9">
+          <Results />
+        </article>
       </section>
     </div>
   );
