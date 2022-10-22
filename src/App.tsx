@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import Nav from "./components/nav";
 import ContainerWrapper from "./components/container";
 import AsideLinks from "./components/aside-links";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route element={<EShop />} path="/" />
           <Route element={<Game />} path="/game" />
         </Routes>
+        <Footer />
       </ContainerWrapper>
       <AsideLinks />
     </div>
