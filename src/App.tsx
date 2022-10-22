@@ -1,5 +1,5 @@
 import "./App.scss";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EShop from "./pages/eshop";
 import Game from "./pages/game";
 
@@ -16,8 +16,9 @@ function App() {
       <ContainerWrapper>
         <Nav />
         <Routes>
-          <Route element={<EShop />} path="/" />
+          <Route element={<EShop />} path="/e-shop" />
           <Route element={<Game />} path="/game" />
+          <Route element={<Navigate to="/e-shop" />} path="*" />
         </Routes>
         <Footer />
       </ContainerWrapper>
