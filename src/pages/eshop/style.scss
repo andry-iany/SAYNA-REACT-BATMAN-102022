@@ -3,7 +3,7 @@
 #header {
   padding: 0 2.5rem;
   min-height: max-content;
-  height: 100vh;
+  height: calc(100vh - 3.5rem);
 
   span {
     display: block;

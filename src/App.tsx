@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import EShop from "./pages/eshop";
 import Game from "./pages/game";
@@ -10,7 +10,7 @@ import ContainerWrapper from "./components/container";
 
 function App() {
   return (
-    <div>
+    <div id="App">
       <ContainerWrapper>
         <Nav />
         <Routes>
