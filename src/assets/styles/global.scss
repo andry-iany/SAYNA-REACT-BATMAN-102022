@@ -1,0 +1,163 @@
+@use "./_partials/variables";
+@use "./_partials/mixins";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  scroll-behavior: smooth;
+  min-width: variables.$min-width;
+}
+
+body {
+  overflow-x: hidden;
+  color: variables.$white !important;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  background-color: variables.$black-1 !important;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  &-reset {
+    cursor: pointer;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    @include mixins.font_rajdhani_medium;
+  }
+
+  &-group {
+    gap: 1rem 2rem;
+    @include mixins.flex($direction: column);
+
+    @include mixins.mq_md {
+      @include mixins.flex($direction: row);
+    }
+  }
+
+  &-translucent-red,
+  &-translucent-red-blue,
+  &-translucent-blue,
+  &-translucent-yellow {
+    width: 13rem;
+    min-width: max-content;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  &-translucent-blue {
+    background: variables.$grad-blue-transp-3;
+
+    &:hover {
+      background: variables.$grad-blue-opaque-3;
+    }
+  }
+
+  &-translucent-red {
+    background: variables.$grad-red-transp;
+
+    &:hover {
+      background: variables.$grad-red-opaque;
+    }
+  }
+
+  &-translucent-red-blue {
+    background: variables.$grad-br-transp;
+
+    &:hover {
+      background: variables.$grad-br-opaque;
+    }
+  }
+
+  &-translucent-yellow {
+    background: variables.$grad-orange-transp;
+
+    &:hover {
+      background: variables.$grad-orange-opaque;
+    }
+  }
+
+  &-bordered {
+    position: relative;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    border-image: variables.$grad-blue-transp 1;
+
+    &:hover {
+      background: variables.$grad-blue-transp;
+    }
+  }
+}
+
+.icon {
+  &-small {
+    height: 1.3rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &-medium {
+    height: 2.8rem;
+  }
+
+  &-large {
+    width: 2.8rem;
+
+    @include mixins.mq_md {
+      width: 3.5rem;
+    }
+    @include mixins.mq_lg {
+      width: 5rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.icon-link {
+  position: relative;
+
+  &:hover img {
+    filter: brightness(0) saturate(100%) invert(88%) sepia(74%) saturate(5057%)
+      hue-rotate(359deg) brightness(104%) contrast(106%);
+  }
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item a {
+  color: rgb(160, 160, 160) !important;
+  text-decoration: none !important;
+}
